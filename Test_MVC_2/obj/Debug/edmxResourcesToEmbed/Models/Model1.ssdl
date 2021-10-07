@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_MVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ilceler">
+    <Key>
+      <PropertyRef Name="ilce_no" />
+    </Key>
+    <Property Name="ilce_no" Type="int" Nullable="false" />
+    <Property Name="isim" Type="varchar(max)" />
+    <Property Name="il_no" Type="int" />
+  </EntityType>
+  <EntityType Name="Iller">
+    <Key>
+      <PropertyRef Name="il_no" />
+    </Key>
+    <Property Name="il_no" Type="int" Nullable="false" />
+    <Property Name="isim" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Soyad" Type="nvarchar(max)" />
+    <Property Name="Mail" Type="nvarchar(max)" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="10" />
+    <Property Name="Adres" Type="nvarchar(max)" />
+    <Property Name="Il" Type="nvarchar(max)" />
+    <Property Name="Ilce" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Test_MVCModelStoreContainer">
+    <EntitySet Name="Ilceler" EntityType="Self.Ilceler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Iller" EntityType="Self.Iller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,88 @@
+﻿@model Test_MVC_2.Models.UserInfo
+@{
+    ViewBag.Title = "Edit";
+
+}
+<form method="post" action="~/Home/EditSave">
+    <div class="row bosluk">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Ad : </label>
+            <div class="col-md-6">
+                @Html.HiddenFor(m => m.Id)
+                @Html.TextBoxFor(u => u.Ad, new { @class = "form-control", placeholder = "Adınızı Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Ad)
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Soyad : </label>
+            <div class="col-md-6">
+                @Html.TextBoxFor(u => u.Soyad, new { @class = "form-control", placeholder = "Soyadınızı Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Soyad)
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Mail : </label>
+            <div class="col-md-6">
+                @Html.TextBoxFor(u => u.Mail, new { @class = "form-control", placeholder = "Mail Adresiniz Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Mail)
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Telefon : </label>
+            <div class="col-md-6">
+                @Html.TextBoxFor(u => u.Telefon, new { @class = "form-control", placeholder = "Telefon Numaranızı Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Telefon)
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">Adres : </label>
+            <div class="col-md-6">
+                @Html.TextAreaFor(u => u.Adres, new { @class = "form-control", placeholder = "Adresini Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Adres)
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">İl : </label>
+            <div class="col-md-6">
+                @Html.TextBoxFor(u => u.Il, new { @class = "form-control", placeholder = "İl Giriniz .." })
+                @Html.ValidationMessageFor(m => m.Il)
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group">
+            <label class="col-md-2 control-label">İlçe : </label>
+            <div class="col-md-6">
+                @Html.TextBoxFor(u => u.Ilce, new { @class = "form-control", placeholder = "İlçe Giriniz .." })
+                  @Html.ValidationMessageFor(m => m.Ilce)
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <div class="row">
+        <button class="btn btn-warning">KAYDET</button>
+    </div>
+
+</form>
+

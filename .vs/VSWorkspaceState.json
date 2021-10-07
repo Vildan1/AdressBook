@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Test_MVC_2",
+    "\\Test_MVC_2\\Controllers",
+    "\\Test_MVC_2\\Models",
+    "\\Test_MVC_2\\Security",
+    "\\Test_MVC_2\\Views",
+    "\\Test_MVC_2\\Views\\Access",
+    "\\Test_MVC_2\\Views\\Home",
+    "\\Test_MVC_2\\Views\\Shared"
+  ],
+  "PreviewInSolutionExplorer": false
+}

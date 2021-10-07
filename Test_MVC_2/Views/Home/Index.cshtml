@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Test_MVC_2.Models.UserInfo>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+
+    <table id="tbl1" class="table table-bordered table-hover table-striped bosluk ">
+        <thead >
+            <tr >
+                <td>ID</td>
+                <td>Ad</td>
+                <td>Soyad</td>
+                <td>Mail</td>
+                <td>Telefon</td>
+                <td>Adres</td>
+                <td>İl</td>
+                <td>İlçe</td>
+                <td style="padding-right:150px">İşlemler</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Ad</td>
+                    <td>@item.Soyad</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Telefon</td>
+                    <td>@item.Adres</td>
+                    <td>@item.Il</td>
+                    <td>@item.Ilce</td>
+                    <td>
+                        <a href="~/Home/Delete/@item.Id" class="btn btn-danger">Sil</a>
+                        <a href="~/Home/Edit/@item.Id" class="btn btn-warning">Düzenle</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    
+        <script>
+            $(document).ready(function () {
+                $('#tbl1').DataTable({
+                    language: {
+                        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+                    }
+                });
+            });
+        </script>
+
+
+  
+
+
+
+

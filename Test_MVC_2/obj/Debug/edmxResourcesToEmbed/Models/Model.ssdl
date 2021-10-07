@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_MVC_2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar(max)" />
+    <Property Name="Soyad" Type="nvarchar(max)" />
+    <Property Name="Mail" Type="nvarchar(max)" />
+    <Property Name="Telefon" Type="nvarchar(max)" />
+    <Property Name="Adres" Type="nvarchar(max)" />
+    <Property Name="Il" Type="nvarchar(max)" />
+    <Property Name="Ilce" Type="nvarchar(max)" />
+    <Property Name="olusturanKullanici" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Sifre" Type="nvarchar(max)" />
+    <Property Name="tip" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Test_MVC_2ModelStoreContainer">
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

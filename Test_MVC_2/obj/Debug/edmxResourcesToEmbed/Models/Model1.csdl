@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_MVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ilceler">
+    <Key>
+      <PropertyRef Name="ilce_no" />
+    </Key>
+    <Property Name="ilce_no" Type="Int32" Nullable="false" />
+    <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="il_no" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Iller">
+    <Key>
+      <PropertyRef Name="il_no" />
+    </Key>
+    <Property Name="il_no" Type="Int32" Nullable="false" />
+    <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Il" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ilce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Test_MVCEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ilcelers" EntityType="Self.Ilceler" />
+    <EntitySet Name="Illers" EntityType="Self.Iller" />
+    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+  </EntityContainer>
+</Schema>

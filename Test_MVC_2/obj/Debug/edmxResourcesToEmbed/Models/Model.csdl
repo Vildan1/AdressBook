@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test_MVC_2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Il" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ilce" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="olusturanKullanici" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Test_MVC_2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>
